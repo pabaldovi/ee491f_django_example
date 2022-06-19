@@ -3,7 +3,7 @@
 {% block content %}
 <form method="post">
     {% csrf_token %}
-    <div class="alert alert-danger">Are you sure you want to delete "{{ object.description }}"?</div>
+    <div class="alert alert-danger">Are you sure you want to delete post"{{ object }}"?</div>
     <input class="btn btn-outline-primary" type="submit" value="submit">
     <a href="{% url 'blog:index' %}" class="btn btn-outline-dark">return</a>
 </form>

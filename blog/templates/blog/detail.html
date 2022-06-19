@@ -2,9 +2,9 @@
 
 {% block content %}
 <ul class="list-group">
-    <li class="list-group-item">{{ object }}</li>
-    <li class="list-group-item">{{ object.author }}</li>
     <li class="list-group-item">{{ object.title }}</li>
+    <li class="list-group-item">{{ object.author }}</li>
+    <li class="list-group-item">{{ object.published_date }}</li>
     <li class="list-group-item">{{ object.text }}</li>
     <li class="list-group-item">
         <a href="{% url 'blog:update' object.id %}" class="btn btn-outline-success">edit</a>

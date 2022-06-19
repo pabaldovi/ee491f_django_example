@@ -8,7 +8,9 @@
                 <tbody>
                     {% for post in object_list %}
                     <tr>
-                        <td>{{ post }}</td>
+                        <th>{{ post.title }}</th>
+                        <td>{{ post.author }}</td>
+                        <td>{{ post.published_date }}</td>
                         <td><a href="{% url 'blog:detail' post.id %}" class="btn btn-outline-secondary">view</a></td>
                         <td><a href="{% url 'blog:update' post.id %}" class="btn btn-outline-success">edit</a></td>
                         <td><a href="{% url 'blog:delete' post.id %}" class="btn btn-outline-danger">delete</a></td>
