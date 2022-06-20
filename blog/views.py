@@ -30,13 +30,19 @@ class DeleteView(generic.edit.DeleteView):
     success_url = reverse_lazy('blog:index')
 
 class DescendingDateView(generic.ListView):
-    template_name = 'blog/descending_date.html'
+    template_name = 'blog/index.html'
     
     def get_queryset(self):
         return Post.objects.order_by('-published_date')
 
 class TodayPostView(generic.ListView):
-    template_name = 'blog/today.html'
+    template_name = 'blog/index.html'
 
     def get_queryset(self):
         return Post.objects.filter(published_date__date=date.today())
+
+class TodayDescendingView(generic.ListView):
+    template_name = 'blog/index.html'
+
+    def get_queryset(self):
+        return Post.objects.filter(published_date__date=date.today()).order_by('-published_date')
