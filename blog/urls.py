@@ -11,4 +11,5 @@ urlpatterns = [
     path('descending/', views.DescendingDateView.as_view(), name='descending'),
     path('today/', views.TodayPostView.as_view(), name='today'),
     path('today_descending/', views.TodayDescendingView.as_view(), name='today_descending'),
+    path('search/', views.SearchView.as_view(), name='search'),
 ]

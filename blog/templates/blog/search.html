@@ -1,0 +1,21 @@
+{% extends "blog/base.html" %}
+
+{% block content %}
+<form method="GET">
+    {{ filter.form }}
+    <input class="btn btn-outline-primary" type="submit" value="submit">
+
+    {% for post in filter.qs %}
+    <ul class="list-group">
+        <li class="list-group-item">Title: {{ post.title }}</li>
+        <li class="list-group-item">Author: {{ post.author }}</li>
+        <li class="list-group-item">Created date: {{ post.created_date }}</li>
+        <li class="list-group-item">Publish date: {{ post.published_date }}</li>
+        <li class="list-group-item">{{ post.text }}</li>
+        <li class="list-group-item">
+            <a href="{% url 'blog:index' %}" class="btn btn-outline-dark">return</a>
+        </li>
+    </ul>
+    {% endfor %}
+</form>
+{% endblock %}

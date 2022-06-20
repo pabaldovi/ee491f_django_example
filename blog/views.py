@@ -3,6 +3,7 @@ from django.urls import reverse_lazy
 from .models import Post
 from .forms import PostForm
 from datetime import date
+from .filters import PostFilter
 
 class IndexView(generic.ListView):
     template_name = 'blog/index.html'
@@ -46,3 +47,14 @@ class TodayDescendingView(generic.ListView):
 
     def get_queryset(self):
         return Post.objects.filter(published_date__date=date.today()).order_by('-published_date')
+
+class SearchView(generic.ListView):
+    template_name = 'blog/search.html'
+
+    def get_queryset(self):
+        return Post.objects.all()
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['filter'] = PostFilter(self.request.GET, queryset=self.get_queryset())
+        return context
