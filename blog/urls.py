@@ -9,4 +9,5 @@ urlpatterns = [
     path('update/<int:pk>', views.UpdateView.as_view(), name='update'),
     path('delete/<int:pk>', views.DeleteView.as_view(), name='delete'),
     path('descending/', views.DescendingDateView.as_view(), name='descending'),
+    path('today/', views.TodayPostView.as_view(), name='today'),
 ]

@@ -2,6 +2,7 @@ from django.views import generic
 from django.urls import reverse_lazy
 from .models import Post
 from .forms import PostForm
+from datetime import date
 
 class IndexView(generic.ListView):
     template_name = 'blog/index.html'
@@ -33,3 +34,9 @@ class DescendingDateView(generic.ListView):
     
     def get_queryset(self):
         return Post.objects.order_by('-published_date')
+
+class TodayPostView(generic.ListView):
+    template_name = 'blog/today.html'
+
+    def get_queryset(self):
+        return Post.objects.filter(published_date__date=date.today())
