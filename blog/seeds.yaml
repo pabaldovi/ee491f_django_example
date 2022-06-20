@@ -1,0 +1,71 @@
+- model: blog.post
+  fields:
+    # author: admin
+    title: TITLE 1
+    text: This is a post
+    created_date: 2022-06-01 01:00:00+0000
+    published_date: 2022-06-01 01:00:00+0000
+
+- model: blog.post
+  fields:
+    # author: admin
+    title: TITLE 2
+    text: This is a post
+    created_date: 2022-06-02 01:00:00+0000
+    published_date: 2022-06-02 01:00:00+0000
+
+- model: blog.post
+  fields:
+    # author: admin
+    title: TITLE 3
+    text: This is a post
+    created_date: 2022-06-03 01:00:00+0000
+    published_date: 2022-06-03 01:00:00+0000
+
+- model: blog.post
+  fields:
+    # author: admin
+    title: TITLE 4
+    text: This is a post
+    created_date: 2022-06-04 01:00:00+0000
+    published_date: 2022-06-04 01:00:00+0000
+
+- model: blog.post
+  fields:
+    # author: admin
+    title: TITLE 5
+    text: This is a post
+    created_date: 2022-06-05 01:00:00+0000
+    published_date: 2022-06-05 01:00:00+0000
+
+- model: blog.post
+  fields:
+    # author: admin
+    title: TITLE 6
+    text: This is a post
+    created_date: 2022-06-20 01:00:00+0000
+    published_date: 2022-06-20 01:00:00+0000
+
+- model: blog.post
+  fields:
+    # author: admin
+    title: TITLE 7
+    text: This is a post
+    created_date: 2022-06-20 02:00:00+0000
+    published_date: 2022-06-20 02:00:00+0000
+
+- model: blog.post
+  fields:
+    # author: admin
+    title: TITLE 8
+    text: This is a post
+    created_date: 2022-06-20 11:00:00+0000
+    published_date: 2022-06-20 11:00:00+0000
+
+- model: blog.post
+  fields:
+    # author: admin
+    title: TITLE 9
+    text: This is a post
+    created_date: 2022-06-20 13:00:00+0000
+    published_date: 2022-06-20 13:00:00+0000
